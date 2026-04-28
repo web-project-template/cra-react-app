@@ -1,5 +1,6 @@
 import './Form.css';
 import React, { Component } from 'react';
+import Header from '../../components/Header';
 
 export default class Form extends Component {
   constructor(props) {
@@ -140,8 +141,10 @@ export default class Form extends Component {
 
     return (
       <div className="form-page">
-        <h2>表单示例</h2>
-        <p className="form-desc">包含各种原生HTML表单组件的示例</p>
+        <Header
+          title="表单示例" 
+          description="包含各种原生HTML表单组件的示例" 
+        />
 
         {submitted && (
           <div className="success-message">

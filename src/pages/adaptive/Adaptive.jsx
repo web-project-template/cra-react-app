@@ -1,5 +1,6 @@
 import './Adaptive.css';
 import React, { Component } from 'react';
+import Header from '../../components/Header';
 import TableView from './components/TableView';
 import ListView from './components/ListView';
 
@@ -30,10 +31,10 @@ export default class Adaptive extends Component {
     
     return (
       <div className="adaptive-page">
-        <h2>适配示例</h2>
-        <p className="adaptive-desc">
-          {isMobile ? '移动端 - 列表下拉加载' : 'PC端 - 表格分页显示'}
-        </p>
+        <Header
+          title="适配示例" 
+          description={isMobile ? '移动端 - 列表下拉加载' : 'PC端 - 表格分页显示'} 
+        />
         {isMobile ? <ListView /> : <TableView />}
       </div>
     );
