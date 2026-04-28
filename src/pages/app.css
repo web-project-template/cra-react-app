@@ -31,7 +31,7 @@
 .app-nav a {
   flex-grow: 1;
   flex-shrink: 0;
-  flex-basis: 33.33%;
+  flex-basis: 25%;
   padding: 0 0;
   color: #151515;
   border-right: 1px solid white;

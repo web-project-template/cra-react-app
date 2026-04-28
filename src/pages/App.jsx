@@ -6,6 +6,7 @@ const Home = lazy(() => import(/*webpackChunkName:"home"*/'./home/index'))
 const User = lazy(() => import(/*webpackChunkName:"user"*/'./user/index'))
 const UserEdit = lazy(() => import(/*webpackChunkName:"user.edit"*/'./user/UserEdit'))
 const Task = lazy(() => import(/*webpackChunkName:"task"*/'./task/Task'))
+const Adaptive = lazy(() => import(/*webpackChunkName:"adaptive"*/'./adaptive/Adaptive'))
 
 export default function App() {
   return (
@@ -22,12 +23,15 @@ export default function App() {
             <Route path="/user/edit" exact component={UserEdit}></Route>
 
             <Route path="/task" exact component={Task}></Route>
+
+            <Route path="/adaptive" exact component={Adaptive}></Route>
           </Switch>
         </div>
 
         <div className={'app-nav'}>
           <NavLink to="/home">主页</NavLink>
           <NavLink to="/task">任务</NavLink>
+          <NavLink to="/adaptive">适配</NavLink>
           <NavLink to="/user">我的</NavLink>
         </div>
       </Suspense>
