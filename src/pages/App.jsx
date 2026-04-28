@@ -1,7 +1,7 @@
 import './app.css';
 import React, {Fragment, Suspense, lazy, Component} from 'react';
 import {Route, Switch, Redirect} from 'react-router-dom';
-import AppNav from '../components/AppNav';
+import Navigation from '../components/Navigation';
 
 const Home = lazy(() => import(/*webpackChunkName:"home"*/'./home/index'))
 const User = lazy(() => import(/*webpackChunkName:"user"*/'./user/index'))
@@ -23,7 +23,7 @@ export default class App extends Component {
     return (
       <Fragment>
         <Suspense fallback={<div>Loading...</div>}>
-          <AppNav navItems={navItems} />
+          <Navigation navItems={navItems} />
           
           <div className="app-main">
             <Switch>

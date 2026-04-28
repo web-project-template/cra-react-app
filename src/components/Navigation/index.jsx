@@ -1,8 +1,8 @@
-import './AppNav.css';
+import './index.css';
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 
-export default class AppNav extends Component {
+export default class Navigation extends Component {
   render() {
     const { navItems } = this.props;
 
