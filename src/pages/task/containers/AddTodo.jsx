@@ -26,9 +26,7 @@ let AddTodo = ({dispatch}) => {
               input = node
             }}
           />
-          <div className="input-group-append">
-            <button type="submit" className={'btn btn-primary'}>Add Todo</button>
-          </div>
+          <button type="submit" className={'btn btn-primary'}>Add Todo</button>
         </div>
       </form>
     </div>
